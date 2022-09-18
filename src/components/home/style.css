@@ -1,0 +1,49 @@
+.App{
+    width: 100%;
+    box-shadow: 0 0 6px #000, 0 0 3px #fff;
+    background-color: rgb(192, 192, 192);
+}
+
+.card{
+    height:150px;
+}
+
+.wrap__bomb{
+    height:150px;
+    margin: auto 0;
+}
+
+.bomb{
+    width: 80px;
+    height:80px;
+    background-color: orange;
+    border-radius: 100%;
+    font-size: 8rem;
+}
+.bomb img{
+    width:100%;
+}
+
+
+
+.wrap__button{
+    height:100px;
+}
+
+.btn__ya{
+    height:70px;
+    width:70px;
+    border-radius: 100%;
+    font-size: 1.7rem;
+    box-shadow: 0px 0px 3px blue, 0 0 4px #000;
+    color:blue;
+    font-style: italic;
+}
+
+.dado{
+    width: 30%;
+    height:50px;
+    border: 2px solid#444;
+    box-shadow: -2px -2px 2px #444 inset, -4px -4px 2px #fff inset;
+    cursor: pointer;
+}
