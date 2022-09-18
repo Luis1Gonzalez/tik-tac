@@ -70,8 +70,8 @@ const Home = () => {
   
     return (
       <div className="App p-2 d-flex flex-column flex-wrap">
-        <div className="wrap_header bg-success text-center">
-          <h1>La Papa se Quema</h1>
+        <div className="wrap_header bg-success d-flex justify-content-center align-items-center">
+          <p className='m-0'>TIK-TAC</p>
         </div>
   
         <div className="wrap__dado d-flex justify-content-center align-items-center">
@@ -79,7 +79,7 @@ const Home = () => {
         </div>
   
         <div className="wrap__card bg-primary d-flex justify-content-center p-2">
-          <div className="card w-75 bg-light d-flex justify-content-center align-items-center">
+          <div className="card w-75 d-flex justify-content-center align-items-center">
             {newCards[`${ultimateCard}`]}
           </div>
         </div>
