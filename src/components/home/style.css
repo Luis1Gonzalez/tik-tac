@@ -1,60 +1,72 @@
-.App{
+.App {
     width: 100%;
+    max-width: 400px;
+    min-width: 320px;
     box-shadow: 0 0 6px #000, 0 0 3px #fff;
-    background-color: rgb(192, 192, 192);
+
 }
 
-.wrap_header{
-    height:60px;
-    font-size:2.8rem
+.wrap_header {
+    height: 60px;
+    font-size: 2.8rem;
+    color: #303a43;
+    background-color: rgb(216, 206, 206);
+    box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+    box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
 }
 
-.card{
-    height:150px;
+.card {
+    height: 150px;
     font-size: 5rem;
-    background-image:url(./../../image/fondo.png);
+    background-image: url(./../../image/fondo.png);
     background-repeat: no-repeat;
     background-position: center;
-background-color: rgb(245, 234, 224);
-text-shadow: 0 0 4px #fff, 0 0 6px #444;
-font-weight: bold;
+    background-color: rgb(245, 234, 224);
+    box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+    box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+    text-shadow: 0 0 4px #fff, 0 0 6px #444;
+    font-weight: bold;
 }
 
-.wrap__bomb{
-    height:150px;
+.wrap__bomb {
+    height: 150px;
     margin: auto 0;
 }
 
-.bomb{
+.bomb {
     width: 80px;
-    height:80px;
+    height: 80px;
     background-color: orange;
     border-radius: 100%;
     font-size: 8rem;
 }
-.bomb img{
-    width:100%;
+
+.bomb img {
+    width: 100%;
 }
 
 
 
-.wrap__button{
-    height:100px;
+.wrap__button {
+    height: 100px;
 }
 
-.btn__ya{
-    height:70px;
-    width:70px;
+.btn__ya {
+    height: 70px;
+    width: 70px;
     border-radius: 100%;
     font-size: 1.3rem;
-    box-shadow: 0px 0px 3px blue, 0 0 4px #000;
-    color:blue;
+    color: blue;
     font-style: italic;
+
+    border: 2px solid#444;
+    box-shadow: 0 -0 6px #444 inset, 0 0 8px rgb(24, 24, 24);
+    cursor: pointer;
 }
 
-.dado{
+.dado {
     width: 30%;
-    height:50px;
+    height: 50px;
     border: 2px solid#444;
     box-shadow: -2px -2px 2px #444 inset, -4px -4px 2px #fff inset;
     cursor: pointer;

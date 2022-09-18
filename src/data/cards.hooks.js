@@ -4,7 +4,7 @@ import React from 'react'
 const useCards = () => {
 
 const optionsCards = [
-
+"",
 'ME',
 "NO",
 "NA",
@@ -12,7 +12,26 @@ const optionsCards = [
 "TI",
 "BU",
 "DE",
-"EN"
+"EN",
+"RE",
+"FU",
+"OR",
+"IM",
+"JO",
+"PI",
+"ÑO",
+"DU",
+"RI",
+"ZA",
+"CL",
+"UR",
+"TU",
+"OL",
+"PU",
+"ZO",
+"OS",
+"RO"
+
 
 
 ]
