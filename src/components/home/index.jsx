@@ -14,9 +14,10 @@ const Home = () => {
     let [randomNum, setRandomNumb] = useState(1);
     let [soundTicTac, setSoundTicTac] = useState(false);
     let [soundBomb, setSoundBomb] = useState(false);
-    let [roll, setRoll] = useState('Tirar')
-    let [ultimateCard, setUltimateCard] = useState('')
-    let [colorGround, setColorGround] = useState('#fff')
+    let [roll, setRoll] = useState('Tirar');
+    let [ultimateCard, setUltimateCard] = useState('');
+    let [colorGround, setColorGround] = useState('#fff');
+    let [event, setEvent] = useState('none')
   
     const cards = useCards([]);
     const newCards = cards[0]
@@ -33,6 +34,7 @@ const Home = () => {
       setRandomNumb(0)
       setSoundBomb(false);
       setColorGround('#fff')
+      setEvent('fill')
   if (optionDado === 1){
     setRoll('Delante')
   }else if(optionDado === 2){
@@ -62,6 +64,7 @@ const Home = () => {
           setSoundBomb(true);
         setColorGround(backgroundGeneral2);
         setSoundTicTac(false);
+        
         }else if(randomNum > 1){
           setRandomNumb(randomNum - 1);
           setSoundTicTac(true);
@@ -90,7 +93,7 @@ const Home = () => {
   
   
     return (
-      <div className="App p-2 d-flex flex-column flex-wrap mt-2" style={{backgroundImage:`url(${colorGround})`, backgroundSize:'contain'}}>
+      <div className="App p-2 d-flex flex-column flex-wrap mt-2" style={{backgroundImage:`url(${colorGround})`, backgroundSize:'contain', backgroundRepeat:'no-repeat'}}>
         <div className="wrap_header d-flex justify-content-center align-items-center">
           <p className='m-0 pt-2'>TIK-TAC</p>
         </div>
@@ -115,7 +118,7 @@ const Home = () => {
           className="wrap__button d-flex justify-content-center
   align-items-center"
         >
-          <button className="btn__ya border" onClick={numRandom} >
+          <button className="btn__ya border" style={{pointerEvents:event}} onClick={numRandom} >
             YA!!
           </button>
         </div>

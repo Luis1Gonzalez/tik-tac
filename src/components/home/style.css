@@ -54,12 +54,11 @@
 .btn__ya {
     height: 70px;
     width: 70px;
-
     border-radius: 100%;
     font-size: 1.3rem;
     color: blue;
     font-style: italic;
-
+    pointer-events:fill;
     border: 2px solid#444;
     box-shadow: 0 -0 6px #444 inset, 0 0 8px rgb(24, 24, 24);
     cursor: pointer;
