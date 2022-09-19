@@ -8,7 +8,8 @@ import bombMp3 from './../../sounds/bomb.mp3';
 import useCards from './../../data/cards.hooks.js';
 import backgroundGeneral from './../../image/backgroundGeneral.jpg';
 import backgroundGeneral2 from './../../image/backgroundGeneral2.jpg';
-
+import { Spinner } from 'react-bootstrap';
+import boom from './../../image/boom.png'
 
 const Home = () => {
     let [randomNum, setRandomNumb] = useState(1);
@@ -17,7 +18,9 @@ const Home = () => {
     let [roll, setRoll] = useState('Tirar');
     let [ultimateCard, setUltimateCard] = useState('');
     let [colorGround, setColorGround] = useState('#fff');
-    let [event, setEvent] = useState('none')
+    let [event, setEvent] = useState('none');
+    let [progress, setProgress] = useState('hidden');
+    let [showBoomb, setShowBoom] = useState('hidden');
   
     const cards = useCards([]);
     const newCards = cards[0]
@@ -33,8 +36,10 @@ const Home = () => {
       let optionDado = Math.floor(Math.random() * (dmax - dmin + 1)) + dmin;
       setRandomNumb(0)
       setSoundBomb(false);
-      setColorGround('#fff')
-      setEvent('fill')
+      setColorGround('#fff');
+      setEvent('fill');
+      setProgress('hidden');
+      setShowBoom('hidden')
   if (optionDado === 1){
     setRoll('Delante')
   }else if(optionDado === 2){
@@ -64,11 +69,15 @@ const Home = () => {
           setSoundBomb(true);
         setColorGround(backgroundGeneral2);
         setSoundTicTac(false);
-        setEvent('none')
+        setEvent('none');
+        setProgress('hidden');   
+        setShowBoom('visible')   
         }else if(randomNum > 1){
           setRandomNumb(randomNum - 1);
           setSoundTicTac(true);
-          setColorGround(backgroundGeneral)
+          setColorGround(backgroundGeneral);
+          setProgress('visible');
+          setShowBoom('hidden')
         }
 
         
@@ -102,16 +111,17 @@ const Home = () => {
           <div className="dado bg-light d-flex justify-content-center align-items-center rounded m-2" onClick={dadoRandom}>{roll}</div>
         </div>
   
-        <div className="wrap__card d-flex justify-content-center p-2">
+        <div className="wrap__card d-flex justify-content-center p-2 mb-3">
           <button className="card w-75 d-flex justify-content-center align-items-center">
             {newCards[ultimateCard]}
           </button>
         </div>
   
-        <div className="wrap__bomb d-flex justify-content-center align-items-center">
-          <div className="bomb d-flex justify-content-center align-items-center">
-            <img src={bomb} alt="icono de bomba" />
+        <div className="wrap__bomb d-flex flex-column justify-content-center align-items-center mt-5">
+          <div className="bomb d-flex justify-content-center align-items-center" style={{visibility:progress}}>
+          <Spinner animation="border" variant="danger" />          
           </div>
+          <img  style={{visibility:showBoomb}} src={boom} alt="imagen de un boom"/>
         </div>
   
         <div
