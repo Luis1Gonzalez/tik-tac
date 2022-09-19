@@ -21,7 +21,7 @@ const Home = () => {
     const cards = useCards([]);
     const newCards = cards[0]
   
-    let max = 20;
+    let max = 30;
     let min = 10;
     let dmax = 3;
     let dmin = 1;
