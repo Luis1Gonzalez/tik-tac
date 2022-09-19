@@ -117,9 +117,13 @@ const Home = () => {
           </button>
         </div>
   
-        <div className="wrap__bomb d-flex flex-column justify-content-center align-items-center mt-5">
+        <div className="wrap__bomb d-flex w-100 flex-column justify-content-center align-items-center mt-5">
           <div className="bomb d-flex justify-content-center align-items-center" style={{visibility:progress}}>
-          <Spinner animation="border" variant="danger" />          
+          <Spinner animation="border" variant="warning" />
+          <Spinner animation="border" variant="light" />
+          <Spinner animation="border" variant="primary" />
+          <Spinner animation="border" variant="light" />
+          <Spinner animation="border" variant="danger" />     
           </div>
           <img  style={{visibility:showBoomb}} src={boom} alt="imagen de un boom"/>
         </div>
