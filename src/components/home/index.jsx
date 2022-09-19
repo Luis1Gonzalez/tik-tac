@@ -64,7 +64,7 @@ const Home = () => {
           setSoundBomb(true);
         setColorGround(backgroundGeneral2);
         setSoundTicTac(false);
-        
+        setEvent('none')
         }else if(randomNum > 1){
           setRandomNumb(randomNum - 1);
           setSoundTicTac(true);
@@ -93,7 +93,7 @@ const Home = () => {
   
   
     return (
-      <div className="App p-2 d-flex flex-column flex-wrap mt-2" style={{backgroundImage:`url(${colorGround})`, backgroundSize:'contain', backgroundRepeat:'no-repeat'}}>
+      <div className="App p-2 d-flex flex-column flex-wrap mt-2" style={{backgroundImage:`url(${colorGround})`, backgroundSize:'cover', backgroundRepeat:'no-repeat'}}>
         <div className="wrap_header d-flex justify-content-center align-items-center">
           <p className='m-0 pt-2'>TIK-TAC</p>
         </div>
