@@ -11,7 +11,7 @@ import backgroundGeneral2 from './../../image/backgroundGeneral2.jpg';
 
 
 const Home = () => {
-    let [randomNum, setRandomNumb] = useState(0);
+    let [randomNum, setRandomNumb] = useState(1);
     let [soundTicTac, setSoundTicTac] = useState(false);
     let [soundBomb, setSoundBomb] = useState(false);
     let [roll, setRoll] = useState('Tirar')
@@ -30,7 +30,9 @@ const Home = () => {
 
     function dadoRandom() {
       let optionDado = Math.floor(Math.random() * (dmax - dmin + 1)) + dmin;
-      
+      setRandomNumb(0)
+      setSoundBomb(false);
+      setColorGround('#fff')
   if (optionDado === 1){
     setRoll('Delante')
   }else if(optionDado === 2){
@@ -52,29 +54,43 @@ const Home = () => {
       useEffect(() => {        
       
       let randomInterval = setInterval(() => {
-        if (randomNum === 0) {          
+        if (randomNum === 1) {          
           clearInterval(randomInterval);         
-          setSoundTicTac(false);
+          
+          
+        }else if(randomNum === 2){
           setSoundBomb(true);
-          setColorGround('#e04e18')
-        }else {
+        setColorGround(backgroundGeneral2);
+        setSoundTicTac(false);
+        }else if(randomNum > 1){
           setRandomNumb(randomNum - 1);
           setSoundTicTac(true);
-          setSoundBomb(false);
-          setColorGround('#3c566d')
+          setColorGround(backgroundGeneral)
         }
+
+        
       }, 1000);
       return () => {
         clearInterval(randomInterval);
       };
 
     }, [randomNum]);
-  
+
+
+    // function ejecution(randomNum){
+    //   if(randomNum===1){
+    //     setSoundBomb(true);
+    //     setColorGround('#e04e18');
+    //     console.log('bomb')
+    //   }
+    // }
+    // ejecution()
+
     console.log(randomNum);
   
   
     return (
-      <div className="App p-2 d-flex flex-column flex-wrap mt-2" style={{background:`${colorGround}`}}>
+      <div className="App p-2 d-flex flex-column flex-wrap mt-2" style={{backgroundImage:`url(${colorGround})`, backgroundSize:'contain'}}>
         <div className="wrap_header d-flex justify-content-center align-items-center">
           <p className='m-0 pt-2'>TIK-TAC</p>
         </div>
