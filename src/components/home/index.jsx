@@ -110,7 +110,7 @@ const Home = () => {
           <div className="dado bg-light d-flex justify-content-center align-items-center rounded m-2" onClick={dadoRandom}>{roll}</div>
         </div>
   
-        <div className="wrap__card d-flex justify-content-center p-2 mb-3">
+        <div className="wrap__card d-flex justify-content-center p-2">
           <button className="card w-75 d-flex justify-content-center align-items-center">
             {newCards[ultimateCard]}
           </button>

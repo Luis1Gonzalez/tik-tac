@@ -32,15 +32,19 @@
     height: 150px;
     margin: auto 0;
     width: 100%;
+    background-color: blue;
 }
 
 .wrap__bomb img{
 width:100%;
+height: 130px;
+background-color: olive;
 }
 
 .bomb{
     width: 100%;
     height: 200px;
+    background-color: pink;
 }
 
 
