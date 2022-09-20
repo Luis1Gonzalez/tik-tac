@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
 import { useEffect, useState } from "react";
-import bomb from "./../../image/bomba.png";
+
 import ReactHowler from 'react-howler';
 import clockMp3 from './../../sounds/reloj.mp3';
 import bombMp3 from './../../sounds/bomb.mp3';
@@ -67,6 +67,7 @@ const Home = () => {
           
         }else if(randomNum === 2){
           setSoundBomb(true);
+          window.navigator.vibrate([1000]);
         setColorGround(backgroundGeneral2);
         setSoundTicTac(false);
         setEvent('none');
