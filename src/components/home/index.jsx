@@ -66,7 +66,6 @@ const Home = () => {
           
         }else if(randomNum === 2){
           setSoundBomb(true);
-          window.navigator.vibrate([500]);
         setColorGround(backgroundGeneral2);
         setSoundTicTac(false);
         setEvent('none');
