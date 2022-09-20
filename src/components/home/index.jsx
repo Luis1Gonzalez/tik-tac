@@ -116,7 +116,7 @@ const Home = () => {
           </button>
         </div>
   
-        <div className="wrap__bomb d-flex w-100 flex-column justify-content-center align-items-center mt-5">
+        <div className="wrap__bomb d-flex w-100 flex-column justify-content-center align-items-center mt-4">
           <div className="bomb d-flex justify-content-center align-items-center" style={{visibility:progress}}>
           <Spinner animation="border" variant="warning" />
           <Spinner animation="border" variant="light" />
